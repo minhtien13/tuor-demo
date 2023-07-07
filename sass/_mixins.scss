@@ -1,0 +1,19 @@
+@mixin btn {
+  display: inline-block;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  background-color: #f4f5f9;
+  min-width: 120px;
+}
+@mixin activeLink {
+  display: inline-block;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+@mixin grid($column: 1, $fr: 1fr, $row-gap: 0, $col-gap: 0) {
+  display: grid;
+  grid-template-columns: repeat($column, $fr);
+  grid-row-gap: $row-gap;
+  grid-column-gap: $col-gap;
+}

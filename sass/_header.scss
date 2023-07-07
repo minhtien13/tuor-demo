@@ -1,0 +1,38 @@
+.header {
+  box-shadow: 0px 6px 30px 0px rgba(15, 15, 15, 0.06);
+  background-color: $whiteColor;
+
+  &-bar {
+    &-list {
+      padding: 16px 8px;
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      align-items: center;
+    }
+    &-link {
+      @include btn;
+      padding: 9px 30px;
+      border-radius: 10px;
+      font-size: 14px;
+      color: #777e90;
+      line-height: 1.5;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      min-width: 150px;
+
+      @media screen and (max-width: 767.98px) {
+        min-width: 100px;
+        font-size: 7px;
+        line-height: 10px;
+        padding: 6px 12px;
+        border-radius: 5px;
+      }
+    }
+    &-item--active &-link {
+      background-color: $primaryColor;
+      color: $whiteColor;
+    }
+  }
+}

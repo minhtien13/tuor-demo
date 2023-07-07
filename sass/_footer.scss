@@ -1,0 +1,133 @@
+.footer {
+  padding: 50px 0;
+  background: $whiteColor;
+
+  &-main {
+    border-bottom: 1px solid $gray5;
+
+    @media screen and (max-width: 767.98px) {
+      border: none;
+    }
+
+    &-list {
+      @include grid(4, 1fr, 0, 60px);
+
+      @media screen and (max-width: 767.98px) {
+        @include grid(1, 1fr, 30px);
+      }
+
+      &-item {
+        &-war {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+
+          &-image {
+            width: 20px;
+            height: 20px;
+            border-radius: 12px;
+            flex-shrink: 0;
+          }
+
+          .footer-main-list-item-heading {
+            flex: 0;
+            font-weight: 800;
+          }
+        }
+
+        &-heading {
+          font-size: 24px;
+          color: $gray2;
+          line-height: 1.5;
+        }
+        &-detall {
+          margin: 40px 0 30px;
+          font-size: 16px;
+          line-height: 1.5;
+          font-weight: 400;
+          color: $gray2;
+
+          @media screen and (max-width: 767.98px) {
+            margin: 24px 0 24px;
+          }
+        }
+        &-search {
+          display: inline-flex;
+          padding: 8px 8px 8px 26px;
+          border: 2px solid $gray5;
+          border-radius: 24px;
+
+          @media screen and (max-width: 767.98px) {
+            display: none !important;
+          }
+        }
+      }
+    }
+    &-item-list {
+      margin-top: 20px;
+
+      &-item {
+        margin-bottom: 14px;
+        padding: 0 5px;
+      }
+      &-link {
+        @include activeLink;
+        font-size: 16px;
+        line-height: 1.5;
+        font-weight: 400;
+        color: $gray2;
+      }
+    }
+  }
+
+  &-bottom {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media screen and (max-width: 767.98px) {
+      flex-direction: column;
+    }
+
+    &-txt {
+      display: inline-block;
+      font-size: 14px;
+      line-height: 20px;
+      color: $gray4;
+      font-weight: 400;
+
+      @media screen and (max-width: 767.98px) {
+        font-size: 12px;
+      }
+    }
+    &-icon {
+      display: flex;
+      gap: 14px;
+
+      @media screen and (max-width: 767.98px) {
+        display: none;
+      }
+
+      &-link {
+        @include activeLink;
+        font-size: 24px;
+        color: $gray4;
+      }
+    }
+  }
+  &-icon {
+    display: none;
+    @media screen and (max-width: 767.98px) {
+      display: flex;
+    }
+  }
+  &-search {
+    margin-top: 40px;
+    display: none !important;
+
+    @media screen and (max-width: 767.98px) {
+      display: inline-flex !important;
+    }
+  }
+}
