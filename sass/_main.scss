@@ -172,7 +172,7 @@
     @include grid(3, 1fr, 0, 30px);
 
     @media screen and (max-width: 767.98px) {
-      @include grid(1, 1fr, 0, 30px);
+      @include grid(1, 1fr, 30px, 30px);
     }
     @media screen and (min-width: 768px) and (max-width: 1023.98px) {
       @include grid(2, 1fr, 0, 30px);
